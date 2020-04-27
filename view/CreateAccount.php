@@ -6,8 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     if (empty($_REQUEST['email'])){
         $error['email'] = "Email không được để rỗng";
     } else {
-//        $pattern = '/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/';
-        $pattern = '/^([a-z]){2,}$/';
+        $pattern = '/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/';
+//        $pattern = '/^([a-z]){2,}$/';
         if(!preg_match($pattern,$_REQUEST['email'])){
             $error['email'] = "Email không đúng định dạng";
         } else {
@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     if (empty($_REQUEST['password'])){
         $error['password'] = "Password không được để rỗng";
     } else {
-//        $pattern = '/^([A-Z]){1}([0-9]){1}([|@|!|^|-|%|$]){1}([^\s]){8,}$/';
-        $pattern = '/^([0-9]){2,}$/';
+        $pattern = '/^([A-Z]){1}([0-9]){1}([|@|!|^|-|%|$]){1}([^\s]){8,}$/';
+//        $pattern = '/^([0-9]){2,}$/';
         if(!preg_match($pattern,$_REQUEST['password'])){
             $error['password'] = "Password không đúng định dạng";
         } else {
@@ -29,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     if (empty($_REQUEST['phone'])){
         $error['phone'] = "phone không được để rỗng";
     } else {
-//        $pattern = '/^([096|097|098|086|032|033|034|035|036|037|038|039|089|090|093|070|079|077|076|078|081|082|083|084|085]){1}([1-9]{7})$/';
-        $pattern = '/^([0-9]{2,})$/';
+        $pattern = '/^([096|097|098|086|032|033|034|035|036|037|038|039|089|090|093|070|079|077|076|078|081|082|083|084|085]){1}([1-9]{7})$/';
+//        $pattern = '/^([0-9]{2,})$/';
 
         if(!preg_match($pattern,$_REQUEST['phone'])){
             $error['phone'] = "phone không đúng định dạng";
